@@ -107,7 +107,7 @@ nav button {
     margin-top: 100px;
 }
 
-.header-content h1 {
+.header-content div {
     font-size: 60px;
     line-height: 70px;
     font-weight: 600;
@@ -155,23 +155,93 @@ nav button {
     display: none;
 }
 
+.menu {
+    position: relative;
+}
+
+.menu-button {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+}
+
+.menu input[type="checkbox"] {
+    display: none;
+}
+
+.menu input[type="checkbox"]:checked~.dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: #000000;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    height: 500px;
+    z-index: 10;
+    font-size: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown a:hover {
+    background-color: #555;
+}
+
+.menu {
+    display: none;
+}
+
 @media (max-width: 1000px) {
-    .menu>svg {
-        display: block;
-        position: relative;
-        top: 0;
-        right: 0;
+    .header-content div {
+        font-size: 100px;
+        margin: 40px 0px;
+        line-height: 1.2;
     }
 
-    .menu {
-        position: relative;
-        top: 0;
-        right: 0;
+    .header-content p {
+        font-size: 50px;
+    }
+
+    .header-content {
+        width: 800px;
+        height: 1000px;
+
     }
 
     .nav-links {
         display: none;
 
+    }
+
+    .email-signup {
+        flex-direction: column;
+        background-color: rgba(245, 222, 179, 0);
+    }
+
+    .email-signup input {
+        width: 80vw;
+        padding: 20px 20px 20px 10px;
+        border-radius: 200px;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .email-signup button {
+        font-size: 40px;
     }
 
     nav button {
@@ -182,7 +252,8 @@ nav button {
     nav {
         align-items: right;
         justify-content: flex-end;
-        height: 50px;
+        height: 100px;
+        width: 90vw;
     }
 
     .signin svg {
@@ -192,6 +263,7 @@ nav button {
 
     .signin {
         margin-right: 110px;
+        margin-top: 40px;
     }
 
     .nav-links1>li>a {
@@ -205,26 +277,17 @@ nav button {
         flex-direction: column;
     }
 
-    
-
-    .menu>svg {
-        width: 50px;
-        height: 50px;
+    .menu {
+        display: block;
+        margin-top: 40px;
+        
     }
 
-    .menu:hover {
-        .drop {
-            display: block;
-        }
-
-        .menu>svg {
-            display: block;
-            /* position: absolute; */
-            top: 0;
-            right: 0;
-
-        }
+    .menu li {
+        list-style: none;
     }
-
-
+    .logo{
+        width: 500px;
+        height: 200px;
+    }
 }
